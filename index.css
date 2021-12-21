@@ -33,11 +33,20 @@ body{
 .deno-ground{
     display: flex;
     position: relative;
+    
 }
+
 .deno-ground-img{
     width: 300%;
     position: relative;
+    
+}
 
+#g-1{
+    left: 0;
+}
+#g-2{
+    left: 300%;
 }
 
 .deno-cactus-img{
