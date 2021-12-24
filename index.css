@@ -9,36 +9,42 @@ body{
 }
 
 .deno-game__wrapper{
-    /* overflow: hidden; */
+    overflow: hidden;
     width: 100%;
     height: 100vh;
-    display: flex;
+
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    /* background-color: red; */
 }
 
 .deno-game__container{
     /* background-color: red; */
     position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
 }
-
 .deno-img{
     width: 37px;
     position: absolute;
-    bottom: 0%;
+    
+    
 
     
 }
 
 .deno-ground{
-    display: flex;
+    background-color: greenyellow;
     position: relative;
-    
+    width: 100%;
 }
 
 .deno-ground-img{
     width: 300%;
-    position: relative;
+    position: absolute;
+    margin-top: 3.5%;
     
 }
 
@@ -51,7 +57,15 @@ body{
 
 .deno-cactus-img{
     position: absolute;
-    bottom: 0%;
     height: 37px;
     left: 70%;
+}
+
+@media screen and (max-width:500px) {
+    .deno-img{
+        width: 25px;
+    }
+    .deno-cactus-img{
+        height: 25px;
+    }
 }
