@@ -16,7 +16,7 @@ export function updateDenoGround(delta) {
             // console.log('sigelement left', sigElementLeftProperty - 30);
             if (sigElementLeftProperty <= -300) {
 
-                sig.style.setProperty('--left', 300)
+                sig.style.setProperty('--left', 0)
                 //sig.style.display = 'none'
             }
 
