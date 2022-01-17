@@ -8,7 +8,7 @@ let dinoGround = document.querySelector('.deno-ground')
 let score = document.getElementById('score')
 let frameID;
 
-console.log('Allah is Almighty')
+console.log('I have been able to build this by the grace of Allah')
 
 let lastime;
 
@@ -37,11 +37,14 @@ window.addEventListener('touchstart', () => {
 
 })
 
-function updateScore(delta) {
-    let x = 0;
-    x += delta * .1
-    score.innerText = x
-}
+window.addEventListener('keydown', (event) => {
+    console.log(event);
+    if (event.code == 'Space') {
+        frameID = window.requestAnimationFrame(updateLoop)
+
+    }
+})
+
 
 function checkCollision(elm1, elm2) {
     var elm1Rect = elm1.getBoundingClientRect();
@@ -55,9 +58,6 @@ function checkCollision(elm1, elm2) {
                 gameMSg.innerText = 'Collapse'
                 return window.cancelAnimationFrame(frameID)
 
-                setTimeout(() => {
-                    gameMSg.innerText = '😃'
-                }, 300)
 
             } else {
                 frameID = window.requestAnimationFrame(updateLoop)
@@ -65,14 +65,5 @@ function checkCollision(elm1, elm2) {
 
             }
         }
-        // if (elm1Rect.right >= elm2Rect.left && elm1Rect.left <= elm2Rect.right &&
-        //     elm1Rect.bottom >= elm2Rect.top &&
-        //     elm1Rect.top <= elm2Rect.bottom) {
-        //     gameMSg.innerText = 'Collapse'
-        //     setTimeout(() => {
-        //         gameMSg.innerText = '😃'
-        //     }, 300)
-        // window.alert('Allah is Almighty')
-        //}
     })
 }
